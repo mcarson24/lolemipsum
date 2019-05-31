@@ -1,11 +1,13 @@
 const express = require('express');
-
+const lol = require('lolspeak');
+const txtgen = require('txtgen');
 const app = express();
 
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-	let loltext = 'hello there!';
+	let text = txtgen.paragraph(5);
+	let loltext = lol(text);
 	res.render('index', { loltext});
 });
 
