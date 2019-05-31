@@ -3,6 +3,7 @@ const lol     		= require('lolspeak');
 const txtgen  		= require('txtgen');
 const bodyParser	= require('body-parser');
 const app     		= express();
+const PORT 			= process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'pug');
@@ -33,6 +34,6 @@ app.post('/', (req, res) => {
 	 });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
 	console.log('Application is running at http://localhost:3000');
 });
