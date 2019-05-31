@@ -7,6 +7,7 @@ const PORT 			= process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use(express.json());
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
@@ -28,7 +29,7 @@ app.post('/', (req, res) => {
 		text += txtgen.paragraph(req.body.sentences);
 	}
 
-	res.render('index', { 
+	res.json({ 
 		loltext: lol(text),
 		paragraphs,
 		sentences

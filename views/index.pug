@@ -4,14 +4,9 @@ html
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, intial-scale=1')
 		title lolem ipsum generator
+		link(rel='stylesheet', href='css/styles.css')
 	body
 	div#app
 		h1 Hello there!
-		p=loltext
-		form(action='/', method="POST")
-			label(for='paragraphs') Number of paragraphs
-			input(type='number', id='paragraphs', name='paragraphs', value=paragraphs)
-			label(for='sentences') Number of sentences per paragraph
-			input(type='number', id='sentences', name='sentences', value=sentences)
-			button(type='submit') Generate
+		lol-speaker
 	script(src='js/app.js')
