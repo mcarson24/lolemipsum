@@ -28,7 +28,6 @@ app.post('/', (req, res) => {
 	for (let i = 0; i < paragraphs; i++) {
 		text += txtgen.paragraph(req.body.sentences);
 	}
-	console.log(lol('Oh hello please to make the lolem ipsum here!'));
 	res.json({ 
 		loltext: lol(text),
 		paragraphs,
