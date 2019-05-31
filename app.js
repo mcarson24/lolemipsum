@@ -10,7 +10,11 @@ app.set('view engine', 'pug');
 app.get('/', (req, res) => {
 	let text = txtgen.paragraph(5);
 	let loltext = lol(text);
-	res.render('index', { loltext});
+	res.render('index', { 
+		loltext,
+		paragraphs: 2,
+		sentences: 4
+	});
 });
 
 app.post('/', (req, res) => {
