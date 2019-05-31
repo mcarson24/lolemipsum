@@ -4,7 +4,9 @@
   "description": "Lorem ipsum generator in lolspeek",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode=development",
+    "production": "NODE_ENV=production webpack -p --mode=production",
+    "watch": "npm run dev -- --watch"
   },
   "keywords": [],
   "author": "Matthew Carson <matthew.carson@temple.edu>",
@@ -14,6 +16,15 @@
     "express": "^4.17.1",
     "lolspeak": "file:js/lolspeak",
     "pug": "^2.0.3",
-    "txtgen": "^2.2.2"
+    "txtgen": "^2.2.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "acorn": "^6.1.1",
+    "css-loader": "^2.1.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }
