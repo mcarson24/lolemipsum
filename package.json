@@ -1,0 +1,16 @@
+{
+  "name": "lolem-ipsum",
+  "version": "0.1.0",
+  "description": "Lorem ipsum generator in lolspeek",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matthew Carson <matthew.carson@temple.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.3"
+  }
+}
