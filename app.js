@@ -23,13 +23,16 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
 	let { paragraphs, sentences } = req.body;
 	
-	let text = '';
+	let text = [];
 
 	for (let i = 0; i < paragraphs; i++) {
-		text += txtgen.paragraph(req.body.sentences);
+		text.push(
+			lol(txtgen.paragraph(req.body.sentences))
+		);
 	}
+	
 	res.json({ 
-		loltext: lol(text),
+		loltext: text,
 		paragraphs,
 		sentences
 	 });

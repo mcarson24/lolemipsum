@@ -13,7 +13,9 @@
 			</div>
 			<button @click="getLolSpeak" class="border-solid border-2 border-gray-600 py-6 px-8 rounded hover:bg-gray-600 hover:text-white">Generate</button>
 		</div>
-		<section v-text="lolSpeak" class="leading-relaxed"></section>
+		<section class="leading-relaxed">
+			<p v-for="paragraph in lolSpeak" v-text="paragraph"></p>
+		</section>
 	</div>
 </template>
 
