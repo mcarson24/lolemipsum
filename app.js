@@ -6,8 +6,8 @@ const app     		= express();
 const PORT 			= process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static('public'));
 app.use(express.json());
+app.use(express.static('public'));
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
@@ -28,7 +28,7 @@ app.post('/', (req, res) => {
 	for (let i = 0; i < paragraphs; i++) {
 		text += txtgen.paragraph(req.body.sentences);
 	}
-
+	console.log(lol('Oh hello please to make the lolem ipsum here!'));
 	res.json({ 
 		loltext: lol(text),
 		paragraphs,

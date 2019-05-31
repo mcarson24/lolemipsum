@@ -1,11 +1,16 @@
 const path = require('path');
+const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	entry: './src/js/app.js',
+	entry: {
+		styles: './src/css/styles.css',
+		app: './src/js/app.js'
+	},
 	output: {
-		filename: 'app.js',
-		path: path.resolve(__dirname, 'public/js')
+		path: path.resolve(__dirname, './'),
+		filename: 'public/js/[name].js'
 	},
 	resolve: {
 		alias: {
@@ -14,13 +19,24 @@ module.exports = {
 	},
 	module: {
 	    rules: [
-	      {
-	        test: /\.vue$/,
-	        loader: 'vue-loader'
-	      }
-	    ]
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader'
+			},
+			{
+				test: /\.css$/,
+				use: [ 
+					{ loader: MiniCssExtractPlugin.loader },
+					{ loader: 'css-loader', options: { importLoaders: 1 } },
+					'postcss-loader' 
+				]
+			},
+        ]
 	},
 	plugins: [
-		new VueLoaderPlugin()
+	new MiniCssExtractPlugin({
+      filename: 'public/css/[name].css'
+    }),
+	new VueLoaderPlugin(),
 	]
 }

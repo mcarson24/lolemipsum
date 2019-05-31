@@ -17,12 +17,16 @@
     "express": "^4.17.1",
     "lolspeak": "file:js/lolspeak",
     "pug": "^2.0.3",
+    "tailwindcss": "^1.0.2",
     "txtgen": "^2.2.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "acorn": "^6.1.1",
     "css-loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.7.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",

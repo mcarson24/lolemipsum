@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -437,7 +437,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n\tdata() {\n\t\treturn {\n\t\t\tparagraphs: '3',\n\t\t\tsentences: '4',\n\t\t\tlolSpeak: ''\n\t\t}\n\t},\n\tcreated() {\n\t\tthis.getLolSpeak();\n\t},\n\tmethods: {\n\t\tgetLolSpeak() {\n\t\t\taxios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/', {\n\t\t\t\tparagraphs: this.paragraphs,\n\t\t\t\tsentences: this.sentences\n\t\t\t}).then(({ data }) => {\n\t\t\t\tthis.lolSpeak = data.loltext;\n\t\t\t}).catch(error => {\n\t\t\t});\n\t\t}\n\t}\n});\n\n\n//# sourceURL=webpack:///./src/js/components/LolSpeakGenerator.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n\tdata() {\n\t\treturn {\n\t\t\tparagraphs: '3',\n\t\t\tsentences: '4',\n\t\t\tlolSpeak: ''\n\t\t}\n\t},\n\tcreated() {\n\t\tthis.getLolSpeak();\n\t},\n\tmethods: {\n\t\tgetLolSpeak() {\n\t\t\taxios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/', {\n\t\t\t\tparagraphs: this.paragraphs,\n\t\t\t\tsentences: this.sentences\n\t\t\t}).then(({ data }) => {\n\t\t\t\tthis.lolSpeak = data.loltext;\n\t\t\t}).catch(error => {\n\t\t\t});\n\t\t}\n\t}\n});\n\n\n//# sourceURL=webpack:///./src/js/components/LolSpeakGenerator.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -449,7 +449,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"p-6\" }, [\n    _c(\n      \"div\",\n      { staticClass: \"flex flex-col w-3/4 mx-auto my-6 items-center\" },\n      [\n        _c(\"div\", { staticClass: \"flex mb-4\" }, [\n          _c(\"div\", { staticClass: \"flex flex-col w-1/2 mx-4\" }, [\n            _c(\"label\", { attrs: { for: \"paragraphs\" } }, [\n              _vm._v(\"Number of paragraphs\")\n            ]),\n            _vm._v(\" \"),\n            _c(\"input\", {\n              directives: [\n                {\n                  name: \"model\",\n                  rawName: \"v-model\",\n                  value: _vm.paragraphs,\n                  expression: \"paragraphs\"\n                }\n              ],\n              attrs: { type: \"number\", id: \"paragraphs\", value: \"paragraphs\" },\n              domProps: { value: _vm.paragraphs },\n              on: {\n                input: function($event) {\n                  if ($event.target.composing) {\n                    return\n                  }\n                  _vm.paragraphs = $event.target.value\n                }\n              }\n            })\n          ]),\n          _vm._v(\" \"),\n          _c(\"div\", { staticClass: \"flex flex-col w-1/2 mx-4\" }, [\n            _c(\"label\", { attrs: { for: \"sentences\" } }, [\n              _vm._v(\"Number of sentences\")\n            ]),\n            _vm._v(\" \"),\n            _c(\"input\", {\n              directives: [\n                {\n                  name: \"model\",\n                  rawName: \"v-model\",\n                  value: _vm.sentences,\n                  expression: \"sentences\"\n                }\n              ],\n              attrs: { type: \"number\", id: \"sentences\", value: \"sentences\" },\n              domProps: { value: _vm.sentences },\n              on: {\n                input: function($event) {\n                  if ($event.target.composing) {\n                    return\n                  }\n                  _vm.sentences = $event.target.value\n                }\n              }\n            })\n          ])\n        ]),\n        _vm._v(\" \"),\n        _c(\n          \"button\",\n          {\n            staticClass:\n              \"border-solid border-2 border-gray-600 py-6 px-8 rounded hover:bg-gray-600 hover:text-white\",\n            on: { click: _vm.getLolSpeak }\n          },\n          [_vm._v(\"Generate\")]\n        )\n      ]\n    ),\n    _vm._v(\" \"),\n    _c(\"section\", {\n      staticClass: \"leading-relaxed\",\n      domProps: { textContent: _vm._s(_vm.lolSpeak) }\n    })\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/js/components/LolSpeakGenerator.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", {}, [\n    _c(\"section\", { domProps: { textContent: _vm._s(_vm.lolSpeak) } }),\n    _vm._v(\" \"),\n    _c(\"label\", { attrs: { for: \"paragraphs\" } }, [\n      _vm._v(\"Number of paragraphs\")\n    ]),\n    _vm._v(\" \"),\n    _c(\"input\", {\n      directives: [\n        {\n          name: \"model\",\n          rawName: \"v-model\",\n          value: _vm.paragraphs,\n          expression: \"paragraphs\"\n        }\n      ],\n      attrs: { type: \"number\", id: \"paragraphs\", value: \"paragraphs\" },\n      domProps: { value: _vm.paragraphs },\n      on: {\n        input: function($event) {\n          if ($event.target.composing) {\n            return\n          }\n          _vm.paragraphs = $event.target.value\n        }\n      }\n    }),\n    _vm._v(\" \"),\n    _c(\"label\", { attrs: { for: \"sentences\" } }, [\n      _vm._v(\"Number of sentences\")\n    ]),\n    _vm._v(\" \"),\n    _c(\"input\", {\n      directives: [\n        {\n          name: \"model\",\n          rawName: \"v-model\",\n          value: _vm.sentences,\n          expression: \"sentences\"\n        }\n      ],\n      attrs: { type: \"number\", id: \"sentences\", value: \"sentences\" },\n      domProps: { value: _vm.sentences },\n      on: {\n        input: function($event) {\n          if ($event.target.composing) {\n            return\n          }\n          _vm.sentences = $event.target.value\n        }\n      }\n    }),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.getLolSpeak } }, [_vm._v(\"Generate\")])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/js/components/LolSpeakGenerator.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -485,6 +485,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /***/ (function(module, exports) {
 
 eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || new Function(\"return this\")();\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack:///(webpack)/buildin/global.js?");
+
+/***/ }),
+
+/***/ "./src/css/styles.css":
+/*!****************************!*\
+  !*** ./src/css/styles.css ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/css/styles.css?");
 
 /***/ }),
 
@@ -533,6 +544,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LolSpeakGenerator_vue_vue_type_template_id_87c8b2a4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./LolSpeakGenerator.vue?vue&type=template&id=87c8b2a4& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/LolSpeakGenerator.vue?vue&type=template&id=87c8b2a4&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LolSpeakGenerator_vue_vue_type_template_id_87c8b2a4___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LolSpeakGenerator_vue_vue_type_template_id_87c8b2a4___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/js/components/LolSpeakGenerator.vue?");
+
+/***/ }),
+
+/***/ 0:
+/*!**************************************************!*\
+  !*** multi ./src/js/app.js ./src/css/styles.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./src/js/app.js */\"./src/js/app.js\");\nmodule.exports = __webpack_require__(/*! ./src/css/styles.css */\"./src/css/styles.css\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/css/styles.css?");
 
 /***/ })
 
