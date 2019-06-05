@@ -1,30 +1,39 @@
 'use strict';
 
-const dict = require('./dictionary');
+const dict = require('./dictionary')
 
 function translate (phrase) {
-    let words = phrase.toUpperCase().split(/(?: )+/);
     let translation = '';
+    let words = phrase.toUpperCase().split(/(\s)+/);
 
-    words.forEach((word) => {
-        if (dict[word]) {
-            word = dict[word];
+    words.forEach(word => {
+
+        let cleanWord = word.replace(/(?: |,|\.|!)+/, '');
+
+        let punctuation = '';
+
+        if (word.search(/(?: |,|\.|!)+$/) > 0) {
+            punctuation = word[word.length - 1];
         }
-        translation = translation + word + ' ';
+        if (dict[cleanWord]) {
+            word = dict[cleanWord] + punctuation;
+        }
+
+        translation += word;
     });
-    return translation.trim();
+  return translation.trim();
 }
 
-module.exports = function (phrase) {
+module.exports = phrase => {
     let translation = '';
     let lines = phrase.split(/\n/);
 
-    lines.forEach((line) => {
-        translation += translate(line);
+    lines.forEach(line => {
+      translation += translate(line);
         if (lines.length > 1) {
-            translation = translation + '\n';
+            translation += '\n';
         }
     });
-
     return translation.trim();
 };
+

@@ -19,7 +19,7 @@
     "mocha": "~6.1.4"
   },
   "scripts": {
-    "test": "npm run lint && mocha test.js --reporter spec",
+    "test": "mocha test.js --reporter spec",
     "lint": "eslint **/*.js",
     "readme": "lolspeak \"$(cat README.untranslated.md)\" > README.md"
   },

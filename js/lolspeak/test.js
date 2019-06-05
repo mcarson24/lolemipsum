@@ -10,7 +10,7 @@ describe('Single line phrases', function () {
   it('should be translated', function () {
     assert.equal(
       LOLSPEAK('come here kitty'),
-      'COME HER KITTY'
+      'COME HER KITTEH'
     );
   });
 });
@@ -24,11 +24,32 @@ describe('Multi line phrases', function () {
   });
 });
 
-describe('Full stops, commas and exclamation points', function () {
-  it('should be removed', function () {
+describe('Punctuation', () => {
+  it('should not be removed at end of sentences', () => {
     assert.equal(
-      LOLSPEAK('take, this! away.'),
-      'TAEK DIS AWAY'
+      LOLSPEAK("Hello!"),
+      'Y HALO THAR!'
+    );
+  });
+  it('apostrophes should not be removed', () => {
+    assert.equal(
+      LOLSPEAK("you're"),
+      'UR'
+    );
+  });
+  it('should not remove non word characters in middle of strings', () => {
+    assert.equal(
+      LOLSPEAK('incorrect!@#,$string'),
+      "INCORRECT!@#,$STRING"
+    );
+  })
+})
+
+describe('Full stops, commas and exclamation points', function () {
+  it('should be not removed', function () {
+    assert.equal(
+      LOLSPEAK("don't take, this! away."),
+      'DUN TAEK, DIS! AWAY.'
     );
   });
 });
@@ -51,10 +72,10 @@ describe('Single line explicit phrases', function () {
     });
   });
   describe('"you have broken the build!"', function () {
-    it('should return "U HAS BROKD TEH BUILD"', function () {
+    it('should return "U HAS BROKD TEH BUILD!"', function () {
       assert.equal(
         LOLSPEAK('you have broken the build!'),
-        'U HAS BROKD TEH BUILD'
+        'U HAS BROKD TEH BUILD!'
       );
     });
   });
