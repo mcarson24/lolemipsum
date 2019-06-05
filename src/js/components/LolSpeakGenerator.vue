@@ -11,7 +11,7 @@
 					<input type="number" v-model="sentences" id="sentences" value="sentences" class="p-2 bg-gray-200 text-lg rounded">
 				</div>
 			</div>
-			<button @click="getLolSpeak" class="border-solid border-2 border-indigo-700 py-6 px-8 rounded hover:bg-indigo-700 text-indigo-700 hover:text-white">Generate</button>
+			<button @click="getLolSpeak" class="border-solid border-2 border-indigo-700 py-6 px-8 rounded hover:bg-indigo-700 text-indigo-700 hover:text-white">MAEK LOLEM</button>
 		</div>
 		<section class="leading-relaxed">
 			<p v-for="paragraph in lolSpeak" v-text="paragraph" class="my-3"></p>
