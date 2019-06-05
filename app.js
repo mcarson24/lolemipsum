@@ -11,33 +11,9 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-	let text = txtgen.paragraph(5);
-	let loltext = lol(text);
-	res.render('index', { 
-		loltext,
-		paragraphs: 2,
-		sentences: 4
-	});
-});
-
-app.post('/', (req, res) => {
-	let { paragraphs, sentences } = req.body;
-	
-	let text = [];
-
-	for (let i = 0; i < paragraphs; i++) {
-		text.push(
-			lol(txtgen.paragraph(req.body.sentences))
-		);
-	}
-	
-	res.json({ 
-		loltext: text,
-		paragraphs,
-		sentences
-	 });
+	res.render('index');
 });
 
 app.listen(PORT, () => {
-	console.log('Application is running at http://localhost:3000');
+	console.log(`Application is running at http://localhost:${PORT}`);
 });

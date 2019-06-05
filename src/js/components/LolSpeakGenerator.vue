@@ -20,8 +20,8 @@
 </template>
 
 <script>
-	import axios from 'axios';
-
+	const lol = require('lolspeak');
+	const txtgen = require('txtgen');
 	export default {
 		data() {
 			return {
@@ -35,13 +35,14 @@
 		},
 		methods: {
 			getLolSpeak() {
-				axios.post('/', {
-					paragraphs: this.paragraphs,
-					sentences: this.sentences
-				}).then(({ data }) => {
-					this.lolSpeak = data.loltext;
-				}).catch(error => {
-				});
+				let text = [];
+
+				for (let i = 0; i < this.paragraphs; i++) {
+					text.push(
+						lol(txtgen.paragraph(this.sentences))
+					);
+				}
+				this.lolSpeak = text;
 			}
 		}
 	}

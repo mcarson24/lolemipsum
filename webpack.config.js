@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -42,10 +41,10 @@ module.exports = {
 		}
 	},
 	plugins: [
-	new MiniCssExtractPlugin({
-		filename: 'public/css/[name].css',
-		chunkFilename: '[id].css'
-    }),
-	new VueLoaderPlugin(),
+		new MiniCssExtractPlugin({
+			filename: 'public/css/[name].css',
+			chunkFilename: '[id].css'
+	    }),
+		new VueLoaderPlugin(),
 	]
 }
