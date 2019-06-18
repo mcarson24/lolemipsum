@@ -32,6 +32,8 @@
 		},
 		created() {
 			this.getLolSpeak();
+
+			console.log(lol('Kitties are web developers too! They may need some placeholder text to do thier desinging.'));
 		},
 		methods: {
 			getLolSpeak() {
