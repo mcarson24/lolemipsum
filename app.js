@@ -1,6 +1,4 @@
 const express 		= require('express');
-const lol     		= require('lolspeak');
-const txtgen  		= require('txtgen');
 const bodyParser	= require('body-parser');
 const app     		= express();
 const PORT 			= process.env.PORT || 3000;

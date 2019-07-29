@@ -22,6 +22,7 @@
 <script>
 	const lol = require('lolspeak');
 	const txtgen = require('txtgen');
+
 	export default {
 		data() {
 			return {
@@ -32,8 +33,6 @@
 		},
 		created() {
 			this.getLolSpeak();
-
-			console.log(lol('Kitties are web developers too! They may need some placeholder text to do thier desinging.'));
 		},
 		methods: {
 			getLolSpeak() {
@@ -44,6 +43,7 @@
 						lol(txtgen.paragraph(this.sentences))
 					);
 				}
+				
 				this.lolSpeak = text;
 			}
 		}
