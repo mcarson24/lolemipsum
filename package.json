@@ -1,6 +1,7 @@
 {
   "name": "lolem-ipsum",
   "version": "0.1.0",
+  "repository": "mcarson24/lolem-ipsum",
   "description": "Lorem ipsum generator in lolspeek",
   "main": "app.js",
   "scripts": {
@@ -12,24 +13,24 @@
   "author": "Matthew Carson <matthew.carson@temple.edu>",
   "license": "MIT",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "lolspeak": "file:js/lolspeak",
-    "pug": "^2.0.3",
-    "tailwindcss": "^1.0.2",
-    "txtgen": "^2.2.2",
+    "pug": "^2.0.4",
+    "tailwindcss": "^1.1.2",
+    "txtgen": "^2.2.3",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.3.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.7.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
-    "vue-loader": "^15.7.0",
+    "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2"
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
   }
 }
