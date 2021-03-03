@@ -23,7 +23,7 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "acorn": "^6.3.0",
+    "acorn": "^6.4.1",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.7.0",
     "postcss-loader": "^3.0.0",
